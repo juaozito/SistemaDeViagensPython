@@ -1,0 +1,176 @@
+import time
+import os
+
+def limpar_tela():
+    os.system("cls" if os.name == "nt" else "clear")
+
+voos = []
+classes = []
+
+print("Seja bem-vindo(a) ao sistema de reservas de viagens da BETA Transportes!", end="")
+for i in range(3):
+    print("", end="", flush=True)
+    time.sleep(1)
+limpar_tela()
+
+print("Por favor, fique à vontade para navegar em nosso site.", end="")
+for i in range(3):
+    print("", end="", flush=True)
+    time.sleep(1)
+limpar_tela()
+
+
+while True:
+    print("- TELA INICIAL -")
+    print("1. Acessar Voos")
+    print("2. Reportar Problema")
+    print("3. Pesquisa de Satisfação")
+    print("4. Sair do Site")
+
+    esc = int(input("\n(Por favor, selecione uma opção): "))
+    limpar_tela()
+
+    if esc == 1:
+        print("\n- TELA DE VOOS -")
+        print("1. Classe Econômica")
+        print("2. Classe Executiva")
+        print("3. Promoções (Tempo Limitado)")
+
+        esc1 = int(input("\n(Por favor, selecione uma opção): "))
+        limpar_tela()
+
+        if esc1 == 1:
+            print("\nTABELA DE ESTADOS:")
+            print("1. Viagem para São Paulo (SP) - R$ 1399.90")
+            print("2. Viagem para Manaus (AM) - R$ 1550")
+            print("3. Viagem para Joinville (SC) - R$ 1990")
+            print("4. Viagem para Rio de Janeiro (RJ) - R$ 1650")
+
+            esc2 = int(input("\nPor favor, selecione uma opção: "))
+            limpar_tela()
+
+            if esc2 in [1, 2, 3, 4]:
+                print("Confirmando Reserva", end="")
+                for i in range(3):
+                    print(".", end="", flush=True)
+                    time.sleep(1)
+                limpar_tela()
+
+                print("Reserva Confirmada!")
+                time.sleep(2)
+                limpar_tela()
+
+                print("Voltando à Tela Inicial", end="")
+                for i in range(3):
+                    print(".", end="", flush=True)
+                    time.sleep(1)
+                limpar_tela()
+
+        elif esc1 == 2:
+            print("\nTABELA DE ESTADOS:")
+            print("1. Viagem para São Paulo (SP) - R$ 1549.90")
+            print("2. Viagem para Manaus (AM) - R$ 1720")
+            print("3. Viagem para Joinville (SC) - R$ 2190")
+            print("4. Viagem para Rio de Janeiro (RJ) - R$ 1820")
+
+            esc3 = int(input("\nPor favor, selecione uma opção: "))
+            limpar_tela()
+
+            if esc3 in [1, 2, 3, 4]:
+                print("Confirmando Reserva", end="")
+                for i in range(3):
+                    print(".", end="", flush=True)
+                    time.sleep(1)
+                limpar_tela()
+
+                print("Reserva Confirmada!")
+                time.sleep(2)
+                limpar_tela()
+
+                print("Voltando à Tela Inicial", end="")
+                for i in range(3):
+                    print(".", end="", flush=True)
+                    time.sleep(1)
+                limpar_tela()
+
+        elif esc1 == 3:
+            print("\nTABELA DE ESTADOS:")
+            print("1. Viagem para São Paulo (SP) - R$ 1259.90")
+            print("2. Viagem para Manaus (AM) - R$ 1395")
+            print("3. Viagem para Joinville (SC) - R$ 1791")
+            print("4. Viagem para Rio de Janeiro (RJ) - R$ 1485")
+
+            esc4 = int(input("\nPor favor, selecione uma opção: "))
+            limpar_tela()
+
+            if esc4 in [1, 2, 3, 4]:
+                print("Confirmando Reserva", end="")
+                for i in range(3):
+                    print(".", end="", flush=True)
+                    time.sleep(1)
+                limpar_tela()
+
+                print("Reserva Confirmada!")
+                time.sleep(2)
+                limpar_tela()
+
+                print("Voltando à Tela Inicial", end="")
+                for i in range(3):
+                    print(".", end="", flush=True)
+                    time.sleep(1)
+                limpar_tela()
+
+    elif esc == 2:
+        print("Por favor, relate seu problema!")
+        coment = input("\nComentário: ")
+
+        print("Reportando Problema", end="")
+        for i in range(3):
+            print(".", end="", flush=True)
+            time.sleep(1)
+        limpar_tela()
+            
+        print("Problema Reportado!")
+        time.sleep(2)
+        limpar_tela()
+
+        print("Voltando à Tela Inicial", end="")
+        for i in range(3):
+            print(".", end="", flush=True)
+            time.sleep(1)
+        limpar_tela()
+
+    elif esc == 3:
+        print("Por favor, deixe seu nível de satisfação em relação ao nosso atendimento:")
+        print("\n1. Mais ou Menos")
+        print("2. Bom")
+        print("3. Ótimo")
+        print("4. Excelente")
+
+        ava = input("\nAvaliação: ")
+        limpar_tela()
+
+        print("Enviando Avaliação", end="")
+        for i in range(3):
+            print(".", end="", flush=True)
+            time.sleep(1)
+        
+        print("Avaliação Enviada!")
+        time.sleep(2)
+        limpar_tela()
+
+        print("Voltando à Tela Inicial", end="")
+        for i in range(3):
+            print(".", end="", flush=True)
+            time.sleep(1)
+        limpar_tela()
+
+    elif esc == 4:
+        print("Finalizando programa", end="")
+        for i in range(2):
+            print(".", end="", flush=True)
+            time.sleep(1)
+        limpar_tela()
+            
+        print("Programa Encerrado!")
+        break
