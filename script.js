@@ -60,7 +60,7 @@ function mostrarDestinos(classe) {
         const precoFormatado = formatarPreco(voo.preco);
         
         const li = document.createElement('li');
-        // REMOVIDA A NUMERAÇÃO: ${index + 1}.
+        // Lista destinos sem numeração
         li.textContent = `Viagem para ${voo.destino} - ${precoFormatado}`;
         
         li.onclick = () => confirmarReserva(voo, classe);
@@ -103,7 +103,7 @@ function mostrarReservas() {
     listaReservas.innerHTML += '<h4>Reservas Ativas:</h4>';
     reservas_feitas.forEach((reserva, index) => {
         const precoFormatado = formatarPreco(reserva.preco);
-        // REMOVIDA A NUMERAÇÃO: <strong>${index + 1}.</strong>
+        // Exibe reservas sem numeração no prefixo
         listaReservas.innerHTML += `
             <p>
                 ${reserva.destino} 
