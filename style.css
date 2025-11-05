@@ -4,9 +4,14 @@ body {
     /* Usando a fonte Poppins (importada no HTML) */
     font-family: 'Poppins', sans-serif;
     
-    /* Fundo agora é um verde escuro sólido (#004d40), sem imagem */
-    background-color: #004d40; 
-    
+    /* CONFIGURAÇÃO DA IMAGEM DE FUNDO */
+    /* ATENÇÃO: Substitua esta URL pelo caminho da sua imagem: url('image_6e4e87.jpg') */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/ff/Teatro_Amazonas%2C_Manaus-AM.jpg'); 
+    background-color: #004d40; /* Cor de backup caso a imagem não carregue */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Deixa a imagem fixa ao rolar */
+
     color: #333;
     display: flex;
     justify-content: center;
@@ -14,32 +19,34 @@ body {
     min-height: 100vh;
     margin: 0;
     
-    /* Removidas: background-image, background-size, background-position, background-attachment */
-    /* Removidas: position: relative; z-index: 1; (Não são mais necessários sem a imagem/overlay) */
+    /* Adiciona um overlay sutil para o container se destacar */
+    position: relative;
+    z-index: 1;
 }
 
 /* O container fica centralizado e recebe o destaque branco */
 .container {
-    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco levemente transparente */
+    /* Fundo branco levemente transparente para que a imagem de fundo apareça um pouco */
+    background-color: rgba(255, 255, 255, 0.95); 
     padding: 30px 40px;
-    border-radius: 12px; /* Cantos um pouco mais arredondados */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     width: 100%;
     max-width: 500px;
     text-align: center;
 }
 
 h1 {
-    color: #004d40; /* Verde escuro (cor da companhia) */
+    color: #004d40;
     margin-bottom: 5px;
-    font-weight: 700; /* Mais negrito */
+    font-weight: 700;
 }
 
 h2 {
-    color: #00796b; /* Verde Petróleo */
+    color: #00796b; 
     font-size: 1.1em;
     margin-bottom: 25px;
-    font-weight: 300; /* Mais leve */
+    font-weight: 300;
 }
 
 h3 {
@@ -63,9 +70,9 @@ h3 {
 button {
     display: block;
     width: 100%;
-    padding: 12px; /* Um pouco mais alto */
+    padding: 12px;
     margin-bottom: 10px;
-    background-color: #00796b; /* Verde Petróleo */
+    background-color: #00796b; 
     color: white;
     border: none;
     border-radius: 8px; 
@@ -76,8 +83,8 @@ button {
 }
 
 button:hover {
-    background-color: #004d40; /* Verde Escuro */
-    transform: translateY(-2px); /* Efeito sutil de elevação */
+    background-color: #004d40; 
+    transform: translateY(-2px); 
 }
 
 .btn-voltar {
@@ -96,7 +103,7 @@ button:hover {
 }
 
 .destinos-lista li {
-    padding: 10px 15px; /* Mais padding */
+    padding: 10px 15px; 
     border-bottom: 1px dashed #ccc;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -105,7 +112,7 @@ button:hover {
 }
 
 .destinos-lista li:hover {
-    background-color: #e0f2f1; /* Verde Claro */
+    background-color: #e0f2f1;
 }
 
 textarea {
@@ -122,7 +129,7 @@ textarea {
     font-weight: 700;
     margin-top: 15px;
     padding: 10px;
-    background-color: #e8f5e9; /* Fundo mais suave para mensagens */
+    background-color: #e8f5e9; 
     border-radius: 5px;
 }
 
