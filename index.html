@@ -14,19 +14,19 @@
 
         <div id="tela-principal" class="tela active">
             <h3>Seja Bem-vindo!</h3>
-            <button onclick="mostrarTela('tela-voos')">1. Acessar Voos e Tarifas</button>
-            <button onclick="mostrarTela('tela-problema')">2. Reportar um Problema</button>
-            <button onclick="mostrarTela('tela-satisfacao')">3. Pesquisa de Satisfação</button>
-            <button onclick="window.close()">4. Sair do Site</button>
+            <button onclick="mostrarTela('tela-voos')">Acessar Voos e Tarifas</button>
+            <button onclick="mostrarTela('tela-problema')">Reportar um Problema</button>
+            <button onclick="mostrarTela('tela-satisfacao')">Pesquisa de Satisfação</button>
+            <button onclick="window.close()">Sair do Site</button>
         </div>
 
         <div id="tela-voos" class="tela">
             <h3>Escolha a Categoria de Voo</h3>
-            <button onclick="mostrarDestinos('Econômica')">1. Classe Econômica</button>
-            <button onclick="mostrarDestinos('Executiva')">2. Classe Executiva</button>
-            <button onclick="mostrarDestinos('Promocional')">3. Promoções (Tempo Limitado)</button>
-            <button onclick="mostrarReservas()">4. Visualizar Suas Reservas</button>
-            <button class="btn-voltar" onclick="mostrarTela('tela-principal')">0. Voltar ao Menu Principal</button>
+            <button onclick="mostrarDestinos('Econômica')">Classe Econômica</button>
+            <button onclick="mostrarDestinos('Executiva')">Classe Executiva</button>
+            <button onclick="mostrarDestinos('Promocional')">Promoções (Tempo Limitado)</button>
+            <button onclick="mostrarReservas()">Visualizar Suas Reservas</button>
+            <button class="btn-voltar" onclick="mostrarTela('tela-principal')">Voltar ao Menu Principal</button>
         </div>
         
         <div id="tela-destinos" class="tela">
@@ -34,7 +34,7 @@
             <ul id="lista-destinos" class="destinos-lista">
             </ul>
             <p id="mensagem-reserva" class="mensagem-sucesso"></p>
-            <button class="btn-voltar" onclick="mostrarTela('tela-voos')">0. Voltar para Classes</button>
+            <button class="btn-voltar" onclick="mostrarTela('tela-voos')">Voltar para Classes</button>
         </div>
 
         <div id="tela-reservas" class="tela">
@@ -50,21 +50,21 @@
             <textarea id="comentario-problema" rows="4" placeholder="Detalhe seu problema aqui..."></textarea>
             <button onclick="enviarReporte()">Enviar Reporte</button>
             <p id="mensagem-problema" class="mensagem-sucesso"></p>
-            <button class="btn-voltar" onclick="mostrarTela('tela-principal')">0. Voltar</button>
+            <button class="btn-voltar" onclick="mostrarTela('tela-principal')">Voltar</button>
         </div>
 
         <div id="tela-satisfacao" class="tela">
             <h3>Pesquisa de Satisfação</h3>
             <p>Qual seu nível de satisfação em relação ao nosso atendimento?</p>
             <div class="satisfacao-opcoes">
-                <input type="radio" id="opc1" name="satisfacao" value="Mais ou Menos"><label for="opc1">1. Mais ou Menos</label><br>
-                <input type="radio" id="opc2" name="satisfacao" value="Bom"><label for="opc2">2. Bom</label><br>
-                <input type="radio" id="opc3" name="satisfacao" value="Ótimo"><label for="opc3">3. Ótimo</label><br>
-                <input type="radio" id="opc4" name="satisfacao" value="Excelente"><label for="opc4">4. Excelente</label>
+                <input type="radio" id="opc1" name="satisfacao" value="Mais ou Menos"><label for="opc1">Mais ou Menos</label><br>
+                <input type="radio" id="opc2" name="satisfacao" value="Bom"><label for="opc2">Bom</label><br>
+                <input type="radio" id="opc3" name="satisfacao" value="Ótimo"><label for="opc3">Ótimo</label><br>
+                <input type="radio" id="opc4" name="satisfacao" value="Excelente"><label for="opc4">Excelente</label>
             </div>
             <button onclick="enviarSatisfacao()">Enviar Avaliação</button>
             <p id="mensagem-satisfacao" class="mensagem-sucesso"></p>
-            <button class="btn-voltar" onclick="mostrarTela('tela-principal')">0. Voltar</button>
+            <button class="btn-voltar" onclick="mostrarTela('tela-principal')">Voltar</button>
         </div>
 
     </div>
