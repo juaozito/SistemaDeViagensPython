@@ -1,73 +1,61 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manaus Transportes - Reservas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Manaus Transportes</h1>
-        <h2>Sistema de Reservas de Viagens</h2>
+<div class="container">
+    <h1>Manaus Transportes</h1>
+    <h2>Sistema de Reservas de Viagens</h2>
 
-        <div id="tela-principal" class="tela active">
-            <h3>Seja Bem-vindo!</h3>
-            <button onclick="mostrarTela('tela-voos')">Acessar Voos e Tarifas</button>
-            <button onclick="mostrarTela('tela-problema')">Reportar um Problema</button>
-            <button onclick="mostrarTela('tela-satisfacao')">Pesquisa de Satisfação</button>
-            <button onclick="window.close()">Sair do Site</button>
-        </div>
-
-        <div id="tela-voos" class="tela">
-            <h3>Escolha a Categoria de Voo</h3>
-            <button onclick="mostrarDestinos('Econômica')">Classe Econômica</button>
-            <button onclick="mostrarDestinos('Executiva')">Classe Executiva</button>
-            <button onclick="mostrarDestinos('Promocional')">Promoções (Tempo Limitado)</button>
-            <button onclick="mostrarReservas()">Visualizar Suas Reservas</button>
-            <button class="btn-voltar" onclick="mostrarTela('tela-principal')">Voltar ao Menu Principal</button>
-        </div>
-        
-        <div id="tela-destinos" class="tela">
-            <h3 id="titulo-classe"></h3>
-            <ul id="lista-destinos" class="destinos-lista">
-            </ul>
-            <p id="mensagem-reserva" class="mensagem-sucesso"></p>
-            <button class="btn-voltar" onclick="mostrarTela('tela-voos')">Voltar para Classes</button>
-        </div>
-
-        <div id="tela-reservas" class="tela">
-            <h3>Suas Reservas Ativas</h3>
-            <div id="reservas-lista">
-            </div>
-            <button class="btn-voltar" onclick="mostrarTela('tela-voos')">Voltar</button>
-        </div>
-
-        <div id="tela-problema" class="tela">
-            <h3>Relatar um Problema</h3>
-            <p>Use o campo abaixo para nos informar sobre qualquer dificuldade:</p>
-            <textarea id="comentario-problema" rows="4" placeholder="Detalhe seu problema aqui..."></textarea>
-            <button onclick="enviarReporte()">Enviar Reporte</button>
-            <p id="mensagem-problema" class="mensagem-sucesso"></p>
-            <button class="btn-voltar" onclick="mostrarTela('tela-principal')">Voltar</button>
-        </div>
-
-        <div id="tela-satisfacao" class="tela">
-            <h3>Pesquisa de Satisfação</h3>
-            <p>Qual seu nível de satisfação em relação ao nosso atendimento?</p>
-            <div class="satisfacao-opcoes">
-                <input type="radio" id="opc1" name="satisfacao" value="Mais ou Menos"><label for="opc1">Mais ou Menos</label><br>
-                <input type="radio" id="opc2" name="satisfacao" value="Bom"><label for="opc2">Bom</label><br>
-                <input type="radio" id="opc3" name="satisfacao" value="Ótimo"><label for="opc3">Ótimo</label><br>
-                <input type="radio" id="opc4" name="satisfacao" value="Excelente"><label for="opc4">Excelente</label>
-            </div>
-            <button onclick="enviarSatisfacao()">Enviar Avaliação</button>
-            <p id="mensagem-satisfacao" class="mensagem-sucesso"></p>
-            <button class="btn-voltar" onclick="mostrarTela('tela-principal')">Voltar</button>
-        </div>
-
+    <div id="tela-principal" class="tela active">
+        <h3>Seja Bem-vindo!</h3>
+        <button onclick="mostrarTela('tela-voos')">Acessar Voos e Tarifas</button>
+        <button onclick="mostrarTela('tela-problema')">Reportar um Problema</button>
+        <button onclick="mostrarTela('tela-satisfacao')">Pesquisa de Satisfação</button>
+        <button onclick="window.close()">Sair do Site</button>
     </div>
-    <script src="script.js"></script>
-</body>
-</html>
+
+    <div id="tela-voos" class="tela">
+        <h3>Escolha a Categoria de Voo</h3>
+        <button onclick="mostrarDestinos('Econômica')">Classe Econômica</button>
+        <button onclick="mostrarDestinos('Executiva')">Classe Executiva</button>
+        <button onclick="mostrarDestinos('Promocional')">Promoções (Tempo Limitado)</button>
+        <button onclick="mostrarReservas()">Visualizar Suas Reservas</button>
+        <button class="btn-voltar" onclick="mostrarTela('tela-principal')">Voltar ao Menu Principal</button>
+    </div>
+    
+    <div id="tela-destinos" class="tela">
+        <h3 id="titulo-classe"></h3>
+        <ul id="lista-destinos" class="destinos-lista">
+        </ul>
+        <p id="mensagem-reserva" class="mensagem-sucesso"></p>
+        <button class="btn-voltar" onclick="mostrarTela('tela-voos')">Voltar para Classes</button>
+    </div>
+
+    <div id="tela-reservas" class="tela">
+        <h3>Suas Reservas Ativas</h3>
+        <div id="reservas-lista">
+        </div>
+        <button class="btn-voltar" onclick="mostrarTela('tela-voos')">Voltar</button>
+    </div>
+
+    <div id="tela-problema" class="tela">
+        <h3>Relatar um Problema</h3>
+        <p>Use o campo abaixo para nos informar sobre qualquer dificuldade:</p>
+        <textarea id="comentario-problema" rows="4" placeholder="Detalhe seu problema aqui..."></textarea>
+        <button onclick="enviarReporte()">Enviar Reporte</button>
+        <p id="mensagem-problema" class="mensagem-sucesso"></p>
+        <button class="btn-voltar" onclick="mostrarTela('tela-principal')">Voltar</button>
+    </div>
+
+    <div id="tela-satisfacao" class="tela">
+        <h3>Pesquisa de Satisfação</h3>
+        <p>Qual seu nível de satisfação em relação ao nosso atendimento?</p>
+        <div class="satisfacao-opcoes">
+            <input type="radio" id="opc1" name="satisfacao" value="Mais ou Menos"><label for="opc1">Mais ou Menos</label><br>
+            <input type="radio" id="opc2" name="satisfacao" value="Bom"><label for="opc2">Bom</label><br>
+            <input type="radio" id="opc3" name="satisfacao" value="Ótimo"><label for="opc3">Ótimo</label><br>
+            <input type="radio" id="opc4" name="satisfacao" value="Excelente"><label for="opc4">Excelente</label>
+        </div>
+        <button onclick="enviarSatisfacao()">Enviar Avaliação</button>
+        <p id="mensagem-satisfacao" class="mensagem-sucesso"></p>
+        <button class="btn-voltar" onclick="mostrarTela('tela-principal')">Voltar</button>
+    </div>
+
+</div>
+<script src="script.js"></script>
