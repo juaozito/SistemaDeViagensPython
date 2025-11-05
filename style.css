@@ -4,7 +4,7 @@ body {
     /* Usando a fonte Poppins (importada no HTML) */
     font-family: 'Poppins', sans-serif;
     
-    /* Fundo agora é um verde escuro sólido (#004d40), sem imagem */
+    /* Fundo verde escuro sólido */
     background-color: #004d40; 
     
     color: #333;
@@ -17,7 +17,7 @@ body {
     /* Removidas todas as propriedades de imagem de fundo */
 }
 
-/* O container (painel principal) ainda é branco transparente */
+/* O container (painel principal) é branco transparente com sombra para destaque */
 .container {
     background-color: rgba(255, 255, 255, 0.95); 
     padding: 30px 40px;
@@ -58,7 +58,7 @@ h3 {
     display: block;
 }
 
-/* Botões */
+/* Botões com estilo Flat/Moderno */
 button {
     display: block;
     width: 100%;
@@ -88,7 +88,7 @@ button:hover {
     background-color: #5d5d5d;
 }
 
-/* Lista de Destinos */
+/* Lista de Destinos (Clique aqui para reservar) */
 .destinos-lista {
     list-style: none;
     padding: 0;
