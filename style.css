@@ -1,19 +1,34 @@
+/* Paleta de Cores: #00796b (Primário - Petróleo) | #004d40 (Secundário - Escuro) | #e0f2f1 (Claro) */
+
 body {
-    font-family: Bradley Hand, cursive;
-    background-color: #006400;
+    /* Usando a fonte Poppins (importada no HTML) */
+    font-family: 'Poppins', sans-serif;
+    
+    /* Fundo verde escuro com imagem do Teatro Amazonas (simulada via URL) */
+    background-color: #004d40; /* Verde Escuro da Marca */
+    background-image: url('https://picsum.photos/1920/1080?random=1&city=manaus'); /* Mudar para uma imagem real de Manaus! */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Deixa a imagem fixa ao rolar */
+
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    
+    /* Adiciona um overlay escuro para o texto no container se destacar */
+    position: relative;
+    z-index: 1;
 }
 
+/* O container fica centralizado e recebe o destaque branco */
 .container {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco levemente transparente */
     padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Cantos um pouco mais arredondados */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
     width: 100%;
     max-width: 500px;
     text-align: center;
@@ -22,71 +37,80 @@ body {
 h1 {
     color: #004d40; /* Verde escuro (cor da companhia) */
     margin-bottom: 5px;
+    font-weight: 700; /* Mais negrito */
 }
 
 h2 {
-    color: #00796b;
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    color: #00796b; /* Verde Petróleo */
+    font-size: 1.1em;
+    margin-bottom: 25px;
+    font-weight: 300; /* Mais leve */
 }
 
 h3 {
     margin-top: 0;
     color: #004d40;
+    font-weight: 500;
 }
 
 .tela {
-    display: none; /* Esconde todas as telas por padrão */
+    display: none; 
     text-align: left;
     padding-top: 20px;
     border-top: 1px solid #eee;
 }
 
 .tela.active {
-    display: block; /* Mostra a tela ativa */
+    display: block;
 }
 
+/* Botões com estilo Flat/Moderno */
 button {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px; /* Um pouco mais alto */
     margin-bottom: 10px;
-    background-color: #00796b;
+    background-color: #00796b; /* Verde Petróleo */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; 
     cursor: pointer;
     font-size: 1em;
-    transition: background-color 0.3s;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
 button:hover {
-    background-color: #004d40;
+    background-color: #004d40; /* Verde Escuro */
+    transform: translateY(-2px); /* Efeito sutil de elevação */
 }
 
 .btn-voltar {
     background-color: #757575;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .btn-voltar:hover {
     background-color: #5d5d5d;
 }
 
+/* Lista de Destinos */
 .destinos-lista {
     list-style: none;
     padding: 0;
 }
 
 .destinos-lista li {
-    padding: 8px 0;
+    padding: 10px 15px; /* Mais padding */
     border-bottom: 1px dashed #ccc;
     cursor: pointer;
     transition: background-color 0.2s;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
 .destinos-lista li:hover {
-    background-color: #e0f2f1;
+    background-color: #e0f2f1; /* Verde Claro */
 }
 
 textarea {
@@ -95,15 +119,29 @@ textarea {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box; /* Garante que padding e borda não aumentem o width */
 }
 
 .mensagem-sucesso {
-    color: #388e3c; /* Verde de sucesso */
-    font-weight: bold;
+    color: #388e3c;
+    font-weight: 700;
     margin-top: 15px;
+    padding: 10px;
+    background-color: #e8f5e9; /* Fundo mais suave para mensagens */
+    border-radius: 5px;
 }
 
 .satisfacao-opcoes label {
     display: block;
     padding: 5px 0;
+}
+
+/* Estilo adicional para a lista de reservas */
+#reservas-lista p {
+    border-bottom: 1px dotted #eee;
+    padding: 5px 0;
+}
+
+#reservas-lista strong {
+    color: #004d40;
 }
