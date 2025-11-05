@@ -37,9 +37,12 @@ function mostrarTela(id) {
     document.getElementById(id).classList.add('active');
 
     // Limpa todas as mensagens de sucesso/feedback ao trocar de tela
-    document.getElementById('mensagem-reserva').textContent = '';
-    document.getElementById('mensagem-problema').textContent = '';
-    document.getElementById('mensagem-satisfacao').textContent = '';
+    const mensagemReserva = document.getElementById('mensagem-reserva');
+    if (mensagemReserva) mensagemReserva.textContent = '';
+    const mensagemProblema = document.getElementById('mensagem-problema');
+    if (mensagemProblema) mensagemProblema.textContent = '';
+    const mensagemSatisfacao = document.getElementById('mensagem-satisfacao');
+    if (mensagemSatisfacao) mensagemSatisfacao.textContent = '';
 }
 
 // --- Lógica do Sistema de Reservas ---
@@ -57,7 +60,8 @@ function mostrarDestinos(classe) {
         const precoFormatado = formatarPreco(voo.preco);
         
         const li = document.createElement('li');
-        li.textContent = `${index + 1}. Viagem para ${voo.destino} - ${precoFormatado}`;
+        // REMOVIDA A NUMERAÇÃO: ${index + 1}.
+        li.textContent = `Viagem para ${voo.destino} - ${precoFormatado}`;
         
         li.onclick = () => confirmarReserva(voo, classe);
         listaDestinos.appendChild(li);
@@ -81,7 +85,7 @@ function confirmarReserva(voo, classe) {
         mensagem.textContent = `✅ Reserva Confirmada para ${voo.destino} (${classe})!`;
         setTimeout(() => {
              mostrarTela('tela-voos');
-        }, 2500); // Aumentei o delay para ler a mensagem
+        }, 2500); 
     }, 1500);
 }
 
@@ -99,9 +103,10 @@ function mostrarReservas() {
     listaReservas.innerHTML += '<h4>Reservas Ativas:</h4>';
     reservas_feitas.forEach((reserva, index) => {
         const precoFormatado = formatarPreco(reserva.preco);
+        // REMOVIDA A NUMERAÇÃO: <strong>${index + 1}.</strong>
         listaReservas.innerHTML += `
             <p>
-                <strong>${index + 1}.</strong> ${reserva.destino} 
+                ${reserva.destino} 
                 <span style="font-size: 0.9em; color: #00796b;">(${reserva.classe})</span> - 
                 <span style="font-weight: bold;">${precoFormatado}</span>
             </p>
@@ -151,7 +156,7 @@ function enviarSatisfacao() {
     mensagem.textContent = `Enviando Avaliação (${avaliacao.value})...`;
     setTimeout(() => {
         mensagem.textContent = '✅ Avaliação Enviada! Voltando ao menu principal.';
-        avaliacao.checked = false;
+        if (avaliacao) avaliacao.checked = false;
         setTimeout(() => {
              mostrarTela('tela-principal'); 
         }, 2500);
