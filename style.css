@@ -4,13 +4,9 @@ body {
     /* Usando a fonte Poppins (importada no HTML) */
     font-family: 'Poppins', sans-serif;
     
-    /* Fundo verde escuro com imagem do Teatro Amazonas (simulada via URL) */
-    background-color: #004d40; /* Verde Escuro da Marca */
-    background-image: url('https://picsum.photos/1920/1080?random=1&city=manaus'); /* Mudar para uma imagem real de Manaus! */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Deixa a imagem fixa ao rolar */
-
+    /* Fundo agora é um verde escuro sólido (#004d40), sem imagem */
+    background-color: #004d40; 
+    
     color: #333;
     display: flex;
     justify-content: center;
@@ -18,9 +14,8 @@ body {
     min-height: 100vh;
     margin: 0;
     
-    /* Adiciona um overlay escuro para o texto no container se destacar */
-    position: relative;
-    z-index: 1;
+    /* Removidas: background-image, background-size, background-position, background-attachment */
+    /* Removidas: position: relative; z-index: 1; (Não são mais necessários sem a imagem/overlay) */
 }
 
 /* O container fica centralizado e recebe o destaque branco */
@@ -119,7 +114,7 @@ textarea {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Garante que padding e borda não aumentem o width */
+    box-sizing: border-box; 
 }
 
 .mensagem-sucesso {
